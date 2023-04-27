@@ -1,18 +1,20 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if (nid.length != 13) {
-    return false;
+  var check = isNaN(nid);
+  if (nid.length == 13 && check == false) {
+    return true;
   } else {
-	return true;
+	return false;
   }
-}
+}	
 
 function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
-    return false;
+  var check = isNaN(num);
+  if (check == false && num >=1 && num <=  5) {
+    return true;
   } else {
-	return true;
+	return false;
   }
 }
 
